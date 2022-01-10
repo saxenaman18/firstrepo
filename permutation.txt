@@ -1,0 +1,30 @@
+class Solution {
+    public ArrayList<String> find_permutation(String S,String a2) {
+        if(S.length()==0)
+        {
+            ArrayList<String> bres=new ArrayList<>();
+            bres.add("");
+            return bres;
+        }
+        for(i=0;i<S.length();i++)
+        {
+            char ch =S.charAt(i);
+            String ros=S.substring(0,1)+S.substring(i+1);
+            find_permutation(ros,a2+ch);
+            Arraylist<String> path=new Arraylist<>();
+            
+        }
+        return()
+        
+    }
+    public static void main(String []args)
+    {
+        Scanner kb =new Scanner(System.in);
+        String S=kb.next();
+        ArrayList<String> a1=new ArrayList<>();
+        ArrayList<String> a1=find_permutation(S,"");
+        System.out.println(a1);
+        
+        
+        
+    }
