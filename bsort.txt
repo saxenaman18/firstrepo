@@ -1,0 +1,65 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner kb=new Scanner(System.in);
+		int n=kb.nextInt();
+		int arr[]=new int[n];
+		
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=kb.nextInt();
+		}
+		BubbleSort(arr);
+		print(arr);
+	
+		
+	}
+	public static Boolean Issmall(int arr[],int i,int j)
+	{
+	    if(arr[i]<arr[j])
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;    
+	    }
+	}
+	public static void Swap(int arr[], int i,int j)
+	{
+	    int temp=arr[i];
+	    arr[i]=arr[j];
+	    arr[j]=temp;
+	    
+	}
+	public static void BubbleSort(int arr[])
+	{
+	    for(int itr=1;itr<=arr.length-1;itr++)
+	    {
+	        for(int j=0;j<arr.length-itr;j++)
+	        {
+	            if(Issmall(arr,j+1,j))
+	            {
+	                Swap(arr,j+1,j);
+	            }
+	        }
+	    }
+	}
+	public static void print(int arr[])
+	{
+	    for(int i=0;i<=arr.length-1;i++)
+	    {
+	        System.out.print(arr[i]);
+	    }
+	}
+}
